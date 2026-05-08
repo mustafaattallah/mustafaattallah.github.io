@@ -16,7 +16,9 @@
       --bg: #f8fafc;
       --white: #ffffff;
       --green: #059669;
+      --light-green: #ecfdf5;
       --gold: #f59e0b;
+      --light-gold: #fffbeb;
     }
 
     * {
@@ -136,6 +138,7 @@
 
     .publication {
       border-left-color: var(--green);
+      background: #fbfffd;
     }
 
     .project p,
@@ -152,9 +155,21 @@
 
     .research-badge {
       display: inline-block;
-      background: #ecfdf5;
+      background: var(--light-green);
       color: #065f46;
       border: 1px solid #a7f3d0;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 4px 4px 8px 0;
+    }
+
+    .metric-badge {
+      display: inline-block;
+      background: var(--light-gold);
+      color: #92400e;
+      border: 1px solid #fde68a;
       padding: 5px 9px;
       border-radius: 999px;
       font-size: 13px;
@@ -168,6 +183,18 @@
       border-radius: 14px;
       padding: 20px;
       margin-top: 18px;
+    }
+
+    .publication-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .publication-link:hover {
+      text-decoration: underline;
     }
 
     ul {
@@ -335,103 +362,115 @@
     </section>
 
     <section id="publications">
-      <h2>Publications & Research</h2>
+      <h2>Publications & Machine Learning Research</h2>
 
       <p>
-        My publications and doctoral research are highly related to modern data science because they focus on
-        machine learning performance, statistical validation, optimization, simulation analytics, algorithmic
-        calibration, and data-driven decision support in complex transportation systems.
+        My publications are directly connected to data science and machine learning. They focus on predictive
+        modeling, machine learning performance bias, dimensionality reduction, hierarchical classification-regression,
+        weather-aware speed prediction, simulation analytics, and statistical model validation.
       </p>
 
       <div class="highlight-box">
-        <h3>Research Areas Most Relevant to Data Science</h3>
-        <div class="tag-grid">
-          <span class="tag">Applied Machine Learning</span>
-          <span class="tag">Predictive Modeling</span>
-          <span class="tag">Performance Bias Analysis</span>
-          <span class="tag">Model Validation</span>
-          <span class="tag">Genetic Algorithms</span>
-          <span class="tag">Optimization</span>
-          <span class="tag">Simulation-Based Analytics</span>
-          <span class="tag">Statistical Evaluation</span>
-          <span class="tag">Decision Support Systems</span>
-        </div>
+        <h3>Why This Research Matters for Data Science Roles</h3>
+        <ul>
+          <li>Built and evaluated predictive models using real transportation and environmental data.</li>
+          <li>Compared machine learning methods using error metrics and model performance diagnostics.</li>
+          <li>Studied model bias, dimensionality reduction, and reliability across operating conditions.</li>
+          <li>Connected machine learning outputs to practical decision-support systems.</li>
+        </ul>
+
+        <a class="publication-link" href="https://scholar.google.com/citations?hl=en&user=pjI0fvsAAAAJ" target="_blank">
+          View Google Scholar Profile
+        </a>
       </div>
 
       <div class="publication">
         <div class="publication-title">
-          Ph.D. Dissertation — A Machine Learning Framework for Addressing Performance Bias in Intelligent Transportation System Applications
+          Investigating the Role of Dimension Reduction in Counteracting Machine Learning Performance Bias in TSMO Strategies
         </div>
 
         <span class="research-badge">Machine Learning</span>
-        <span class="research-badge">Bias Evaluation</span>
-        <span class="research-badge">Statistical Validation</span>
-        <span class="research-badge">Model Reliability</span>
+        <span class="research-badge">Dimensionality Reduction</span>
+        <span class="research-badge">Performance Bias</span>
+        <span class="research-badge">Model Validation</span>
 
         <p>
-          This research focused on evaluating and addressing performance bias in machine learning models used
-          in Intelligent Transportation System applications. Instead of relying only on overall accuracy, the work
-          emphasized how models perform across different operating conditions, subgroups, and data scenarios.
+          This paper investigates how dimension-reduction methods can help address machine learning performance
+          bias in Transportation Systems Management and Operations strategies.
         </p>
 
         <p><strong>Data science connection:</strong></p>
         <ul>
-          <li>Evaluated machine learning model performance beyond global accuracy metrics.</li>
-          <li>Applied statistical reasoning to identify inconsistent model behavior across conditions.</li>
-          <li>Focused on model diagnostics, subgroup performance, reliability, and bias-aware evaluation.</li>
-          <li>Connected predictive modeling with responsible and interpretable decision-support systems.</li>
+          <li>Focuses on machine learning model performance beyond simple average accuracy.</li>
+          <li>Connects dimensionality reduction with model reliability and bias mitigation.</li>
+          <li>Highlights the importance of evaluating models across different operating conditions.</li>
+          <li>Supports responsible machine learning for transportation decision-support applications.</li>
         </ul>
+
+        <a class="publication-link" href="https://ascelibrary.org/doi/10.1061/9780784485514.072" target="_blank">
+          View Publication
+        </a>
       </div>
 
       <div class="publication">
         <div class="publication-title">
-          Impact of Autonomous Vehicles on Driving Behaviour and Incident Occurrence on Malaysian Highways:
-          a CoExist Micro-Model and Genetic Algorithm Approach
+          Hierarchical Classification—Regression (HiClassR) to Improve Incident Clearance Time Prediction
         </div>
 
-        <span class="research-badge">Genetic Algorithm</span>
-        <span class="research-badge">Simulation Calibration</span>
-        <span class="research-badge">Optimization</span>
-        <span class="research-badge">Autonomous Vehicles</span>
+        <span class="research-badge">Predictive Modeling</span>
+        <span class="research-badge">Classification</span>
+        <span class="research-badge">Regression</span>
+        <span class="research-badge">Traffic Incident Analytics</span>
 
         <p>
-          This research examined autonomous vehicle impacts using a microsimulation-based modeling framework
-          and genetic algorithm calibration. My contribution focused on the genetic algorithm, analysis, and
-          reporting components supporting simulation calibration and performance evaluation.
+          This paper presents a hierarchical classification-regression framework designed to improve incident
+          clearance time prediction. The work is highly relevant to data science because it combines classification
+          logic with regression modeling for a practical prediction problem.
         </p>
 
         <p><strong>Data science connection:</strong></p>
         <ul>
-          <li>Used evolutionary optimization to calibrate simulation behavior parameters.</li>
-          <li>Connected model parameters with observed or target performance measures.</li>
-          <li>Applied simulation analytics to evaluate complex transportation scenarios.</li>
-          <li>Demonstrated how optimization algorithms can support decision-making in emerging mobility systems.</li>
+          <li>Uses a hybrid classification-regression structure for prediction.</li>
+          <li>Targets a real-world supervised learning problem: incident clearance time estimation.</li>
+          <li>Supports traffic incident management through data-driven prediction.</li>
+          <li>Demonstrates practical machine learning workflow design for operational decision support.</li>
         </ul>
+
+        <a class="publication-link" href="https://ascelibrary.org/doi/10.1061/9780784485514.073" target="_blank">
+          View Publication
+        </a>
       </div>
 
       <div class="publication">
         <div class="publication-title">
-          Intelligent Transportation Systems Research — Machine Learning, Traffic Simulation, and Data-Driven Evaluation
+          Impact of High Resolution Radar-Obtained Weather Data on Spatio-Temporal Prediction of Freeway Speed
         </div>
 
-        <span class="research-badge">ITS Analytics</span>
-        <span class="research-badge">Transportation Data Science</span>
-        <span class="research-badge">Simulation Analytics</span>
-        <span class="research-badge">Research Communication</span>
+        <span class="research-badge">XGBoost</span>
+        <span class="research-badge">KNN</span>
+        <span class="research-badge">Neural Networks</span>
+        <span class="research-badge">Spatio-Temporal Prediction</span>
+        <span class="metric-badge">Speed Prediction</span>
+        <span class="metric-badge">Weather-Aware Modeling</span>
 
         <p>
-          My broader research background includes Intelligent Transportation Systems, traffic simulation,
-          transportation operations, statistical analysis, and machine learning applications. This work supports
-          my ability to translate real-world engineering problems into data science workflows.
+          This journal article developed short-term freeway speed prediction models that fuse high-resolution
+          weather radar data with traffic stream data. The study compared weather-aware and weather-insensitive
+          models and evaluated machine learning methods including Extreme Gradient Boosting, K-Nearest Neighbors,
+          and neural networks.
         </p>
 
         <p><strong>Data science connection:</strong></p>
         <ul>
-          <li>Worked with complex transportation data, simulation outputs, and performance measures.</li>
-          <li>Applied statistical and machine learning concepts to engineering decision problems.</li>
-          <li>Developed methods for comparing scenarios, validating outputs, and communicating results clearly.</li>
-          <li>Combined domain knowledge with analytical modeling and automated reporting.</li>
+          <li>Combines multiple data sources: traffic sensors, speed, flow, occupancy, and radar-based weather data.</li>
+          <li>Applies supervised machine learning for short-term spatio-temporal speed prediction.</li>
+          <li>Compares XGBoost, KNN, and neural network performance using quantitative error metrics.</li>
+          <li>Shows how feature enrichment with weather data can improve predictive model performance.</li>
         </ul>
+
+        <a class="publication-link" href="https://www.mdpi.com/2071-1050/14/22/14932" target="_blank">
+          View Publication
+        </a>
       </div>
     </section>
 
