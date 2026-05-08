@@ -15,6 +15,8 @@
       --border: #e5e7eb;
       --bg: #f8fafc;
       --white: #ffffff;
+      --green: #059669;
+      --gold: #f59e0b;
     }
 
     * {
@@ -50,7 +52,7 @@
     }
 
     header p {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto;
       font-size: 18px;
       color: #e5e7eb;
@@ -68,7 +70,7 @@
 
     nav a {
       color: var(--navy);
-      margin: 0 14px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: 600;
       font-size: 15px;
@@ -123,7 +125,8 @@
       font-size: 14px;
     }
 
-    .project {
+    .project,
+    .publication {
       border-left: 5px solid var(--blue);
       padding: 18px 20px;
       background: #f8fafc;
@@ -131,8 +134,40 @@
       margin-top: 18px;
     }
 
-    .project p {
+    .publication {
+      border-left-color: var(--green);
+    }
+
+    .project p,
+    .publication p {
       margin-bottom: 8px;
+    }
+
+    .publication-title {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .research-badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 4px 4px 8px 0;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+      border: 1px solid #bfdbfe;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 18px;
     }
 
     ul {
@@ -193,7 +228,7 @@
     <h2>Traffic Engineer | Data Scientist | Statistician | Machine Learning Engineer | Automation Developer</h2>
     <p>
       I build practical data science, machine learning, optimization, simulation, and automation workflows
-      that turn complex data into reliable decisions and professional analytical products.
+      that turn complex data into reliable decisions, validated models, and professional analytical products.
     </p>
   </header>
 
@@ -201,6 +236,7 @@
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -217,6 +253,11 @@
       <p>
         I have developed end-to-end analytical workflows involving data extraction, cleaning, feature engineering,
         model development, optimization, validation, reporting, and user-facing software tools.
+      </p>
+      <p>
+        My research and software work are strongly connected to data science because they involve predictive
+        modeling, algorithmic calibration, model performance evaluation, simulation-based analytics, statistical
+        validation, and automated reporting pipelines.
       </p>
     </section>
 
@@ -235,6 +276,8 @@
         <span class="tag">Optimization</span>
         <span class="tag">Genetic Algorithms</span>
         <span class="tag">Simulation Analytics</span>
+        <span class="tag">Bias Analysis</span>
+        <span class="tag">Performance Metrics</span>
         <span class="tag">Excel Automation</span>
         <span class="tag">FastAPI</span>
         <span class="tag">PostgreSQL</span>
@@ -291,6 +334,107 @@
       </div>
     </section>
 
+    <section id="publications">
+      <h2>Publications & Research</h2>
+
+      <p>
+        My publications and doctoral research are highly related to modern data science because they focus on
+        machine learning performance, statistical validation, optimization, simulation analytics, algorithmic
+        calibration, and data-driven decision support in complex transportation systems.
+      </p>
+
+      <div class="highlight-box">
+        <h3>Research Areas Most Relevant to Data Science</h3>
+        <div class="tag-grid">
+          <span class="tag">Applied Machine Learning</span>
+          <span class="tag">Predictive Modeling</span>
+          <span class="tag">Performance Bias Analysis</span>
+          <span class="tag">Model Validation</span>
+          <span class="tag">Genetic Algorithms</span>
+          <span class="tag">Optimization</span>
+          <span class="tag">Simulation-Based Analytics</span>
+          <span class="tag">Statistical Evaluation</span>
+          <span class="tag">Decision Support Systems</span>
+        </div>
+      </div>
+
+      <div class="publication">
+        <div class="publication-title">
+          Ph.D. Dissertation — A Machine Learning Framework for Addressing Performance Bias in Intelligent Transportation System Applications
+        </div>
+
+        <span class="research-badge">Machine Learning</span>
+        <span class="research-badge">Bias Evaluation</span>
+        <span class="research-badge">Statistical Validation</span>
+        <span class="research-badge">Model Reliability</span>
+
+        <p>
+          This research focused on evaluating and addressing performance bias in machine learning models used
+          in Intelligent Transportation System applications. Instead of relying only on overall accuracy, the work
+          emphasized how models perform across different operating conditions, subgroups, and data scenarios.
+        </p>
+
+        <p><strong>Data science connection:</strong></p>
+        <ul>
+          <li>Evaluated machine learning model performance beyond global accuracy metrics.</li>
+          <li>Applied statistical reasoning to identify inconsistent model behavior across conditions.</li>
+          <li>Focused on model diagnostics, subgroup performance, reliability, and bias-aware evaluation.</li>
+          <li>Connected predictive modeling with responsible and interpretable decision-support systems.</li>
+        </ul>
+      </div>
+
+      <div class="publication">
+        <div class="publication-title">
+          Impact of Autonomous Vehicles on Driving Behaviour and Incident Occurrence on Malaysian Highways:
+          a CoExist Micro-Model and Genetic Algorithm Approach
+        </div>
+
+        <span class="research-badge">Genetic Algorithm</span>
+        <span class="research-badge">Simulation Calibration</span>
+        <span class="research-badge">Optimization</span>
+        <span class="research-badge">Autonomous Vehicles</span>
+
+        <p>
+          This research examined autonomous vehicle impacts using a microsimulation-based modeling framework
+          and genetic algorithm calibration. My contribution focused on the genetic algorithm, analysis, and
+          reporting components supporting simulation calibration and performance evaluation.
+        </p>
+
+        <p><strong>Data science connection:</strong></p>
+        <ul>
+          <li>Used evolutionary optimization to calibrate simulation behavior parameters.</li>
+          <li>Connected model parameters with observed or target performance measures.</li>
+          <li>Applied simulation analytics to evaluate complex transportation scenarios.</li>
+          <li>Demonstrated how optimization algorithms can support decision-making in emerging mobility systems.</li>
+        </ul>
+      </div>
+
+      <div class="publication">
+        <div class="publication-title">
+          Intelligent Transportation Systems Research — Machine Learning, Traffic Simulation, and Data-Driven Evaluation
+        </div>
+
+        <span class="research-badge">ITS Analytics</span>
+        <span class="research-badge">Transportation Data Science</span>
+        <span class="research-badge">Simulation Analytics</span>
+        <span class="research-badge">Research Communication</span>
+
+        <p>
+          My broader research background includes Intelligent Transportation Systems, traffic simulation,
+          transportation operations, statistical analysis, and machine learning applications. This work supports
+          my ability to translate real-world engineering problems into data science workflows.
+        </p>
+
+        <p><strong>Data science connection:</strong></p>
+        <ul>
+          <li>Worked with complex transportation data, simulation outputs, and performance measures.</li>
+          <li>Applied statistical and machine learning concepts to engineering decision problems.</li>
+          <li>Developed methods for comparing scenarios, validating outputs, and communicating results clearly.</li>
+          <li>Combined domain knowledge with analytical modeling and automated reporting.</li>
+        </ul>
+      </div>
+    </section>
+
     <section id="experience">
       <h2>Professional Experience Highlights</h2>
 
@@ -315,6 +459,11 @@
         I bring a rare combination of applied data science, statistics, optimization, automation, and engineering
         decision support. I do not only build models; I build complete analytical workflows that move from raw data
         to validated results, clear reporting, and practical decision support.
+      </p>
+      <p>
+        My research background strengthens this value by showing that I can evaluate model behavior, analyze
+        performance bias, validate algorithms, design optimization workflows, and communicate technical results
+        in a clear and professional way.
       </p>
     </section>
 
