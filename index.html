@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mustafa Attallah, Ph.D. | Data Science Portfolio</title>
+  <title>Mustafa Attallah, Ph.D. | Responsible AI & Data Science Portfolio</title>
 
   <style>
     :root {
@@ -19,10 +19,18 @@
       --light-green: #ecfdf5;
       --gold: #f59e0b;
       --light-gold: #fffbeb;
+      --purple: #7c3aed;
+      --light-purple: #f5f3ff;
+      --red: #dc2626;
+      --light-red: #fef2f2;
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -34,9 +42,12 @@
     }
 
     header {
-      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.45), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.35), transparent 36%),
+        linear-gradient(135deg, #0f172a, #1d4ed8);
       color: white;
-      padding: 70px 24px;
+      padding: 76px 24px;
       text-align: center;
     }
 
@@ -54,7 +65,7 @@
     }
 
     header p {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       font-size: 18px;
       color: #e5e7eb;
@@ -72,7 +83,7 @@
 
     nav a {
       color: var(--navy);
-      margin: 0 12px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: 600;
       font-size: 15px;
@@ -83,7 +94,7 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
       padding: 42px 24px;
     }
@@ -110,6 +121,43 @@
       margin-bottom: 6px;
     }
 
+    .lead {
+      font-size: 18px;
+      color: #334155;
+      margin-bottom: 18px;
+    }
+
+    .callout {
+      background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+      border: 1px solid #bfdbfe;
+      border-radius: 16px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .callout strong {
+      color: var(--navy);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      background: #f8fafc;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
     .tag-grid {
       display: flex;
       flex-wrap: wrap;
@@ -127,6 +175,18 @@
       font-size: 14px;
     }
 
+    .tag.safety {
+      background: var(--light-red);
+      color: #991b1b;
+      border-color: #fecaca;
+    }
+
+    .tag.ai {
+      background: var(--light-purple);
+      color: #5b21b6;
+      border-color: #ddd6fe;
+    }
+
     .project,
     .publication {
       border-left: 5px solid var(--blue);
@@ -134,6 +194,16 @@
       background: #f8fafc;
       border-radius: 12px;
       margin-top: 18px;
+    }
+
+    .project.responsible-ai {
+      border-left-color: var(--purple);
+      background: #fbfaff;
+    }
+
+    .project.safety {
+      border-left-color: var(--red);
+      background: #fffafa;
     }
 
     .publication {
@@ -170,6 +240,30 @@
       background: var(--light-gold);
       color: #92400e;
       border: 1px solid #fde68a;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 4px 4px 8px 0;
+    }
+
+    .ai-badge {
+      display: inline-block;
+      background: var(--light-purple);
+      color: #5b21b6;
+      border: 1px solid #ddd6fe;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 4px 4px 8px 0;
+    }
+
+    .risk-badge {
+      display: inline-block;
+      background: var(--light-red);
+      color: #991b1b;
+      border: 1px solid #fecaca;
       padding: 5px 9px;
       border-radius: 999px;
       font-size: 13px;
@@ -219,7 +313,7 @@
       font-size: 14px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       header h1 {
         font-size: 34px;
       }
@@ -236,6 +330,10 @@
       section {
         padding: 24px;
       }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -244,15 +342,17 @@
 
   <header>
     <h1>Mustafa Attallah, Ph.D.</h1>
-    <h2>Traffic Engineer | Data Scientist | Statistician | Machine Learning Engineer | Automation Developer</h2>
+    <h2>Data Scientist | Responsible AI & Safety Measurement | ML Evaluation | Transportation Analytics</h2>
     <p>
-      I develop analytical software, machine learning workflows, statistical models, simulation tools,
-      and automation pipelines for transportation and decision-support applications.
+      I build research, measurement, and automation workflows that evaluate model reliability, safety risk,
+      performance bias, and decision quality using Python, SQL, statistical modeling, machine learning,
+      simulation analytics, and clear evidence-based reporting.
     </p>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#fit">Role Fit</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
@@ -265,44 +365,105 @@
     <section id="about">
       <h2>About Me</h2>
 
-      <p>
+      <p class="lead">
         I am a data scientist, statistician, and transportation analytics professional with a Ph.D. in Civil
         Engineering and Intelligent Transportation Systems. My work focuses on applied machine learning,
-        statistical modeling, optimization, simulation analytics, automation, and decision-support tools.
+        model evaluation, safety analytics, performance bias, simulation automation, and decision-support tools.
       </p>
 
       <p>
-        My technical work includes data extraction, data cleaning, feature engineering, model development,
-        calibration, validation, performance evaluation, report automation, and user-facing software development.
+        My technical work includes data extraction, data cleaning, feature engineering, SQL/Python analysis,
+        model development, calibration, validation, performance evaluation, risk measurement, report automation,
+        and user-facing software development.
       </p>
 
       <p>
-        I work at the intersection of transportation engineering, statistics, machine learning, and software
-        automation, with experience translating complex modeling workflows into practical tools and clear outputs.
+        I work at the intersection of data science, responsible AI evaluation, traffic safety, statistical modeling,
+        and software automation, with experience translating ambiguous technical problems into structured methods,
+        measurable outcomes, and recommendations that technical and non-technical stakeholders can act on.
       </p>
+    </section>
+
+    <section id="fit">
+      <h2>Safety, Integrity & Responsible AI Fit</h2>
+
+      <p class="lead">
+        My background aligns strongly with data science roles focused on safety, integrity, responsible AI,
+        fairness, and applied ML evaluation.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Safety and Risk Measurement</h3>
+          <p>
+            Experienced in defining metrics, evaluating traffic safety and system performance, and turning
+            large model outputs into practical evidence for engineering and operational decisions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Bias, Fairness, and Model Reliability</h3>
+          <p>
+            Doctoral research focused on performance bias in machine learning models for Intelligent
+            Transportation Systems, including subgroup performance, model diagnostics, and reliability across
+            operating conditions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>AI/ML System Evaluation</h3>
+          <p>
+            Hands-on experience with machine learning systems, feature engineering, validation logic,
+            optimization, and stress testing of model behavior under different scenarios and data conditions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Research to Action</h3>
+          <p>
+            Experienced in scoping ambiguous problems, designing quantitative methods, communicating findings,
+            and producing recommendations for engineers, agencies, researchers, and decision-makers.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Relevant focus:</strong> responsible product innovation, platform-safety measurement,
+        AI risk assessment, fairness and bias analysis, model evaluation, metric design, stress testing,
+        and clear communication with both technical and non-technical partners.
+      </div>
     </section>
 
     <section id="skills">
       <h2>Core Skills</h2>
 
       <div class="tag-grid">
-        <span class="tag">R</span>
+        <span class="tag safety">Responsible AI</span>
+        <span class="tag safety">Safety Measurement</span>
+        <span class="tag safety">Integrity Research</span>
+        <span class="tag safety">Risk Assessment</span>
+        <span class="tag safety">Stress Testing</span>
+        <span class="tag ai">Fairness & Bias Analysis</span>
+        <span class="tag ai">Model Evaluation</span>
+        <span class="tag ai">Machine Learning</span>
+        <span class="tag ai">LLM Evaluation Concepts</span>
+        <span class="tag ai">Recommendation-System Risk Concepts</span>
         <span class="tag">Python</span>
-        <span class="tag">ArcGIS Pro</span>
         <span class="tag">SQL</span>
-        <span class="tag">Machine Learning</span>
+        <span class="tag">R</span>
+        <span class="tag">Pandas / NumPy</span>
+        <span class="tag">Scikit-learn</span>
+        <span class="tag">XGBoost</span>
         <span class="tag">Statistical Modeling</span>
         <span class="tag">Data Cleaning</span>
         <span class="tag">Feature Engineering</span>
-        <span class="tag">Model Validation</span>
+        <span class="tag">Metric Design</span>
+        <span class="tag">Experiment Design</span>
         <span class="tag">Optimization</span>
         <span class="tag">Genetic Algorithms</span>
         <span class="tag">Simulation Analytics</span>
-        <span class="tag">Bias Analysis</span>
-        <span class="tag">Performance Metrics</span>
         <span class="tag">Excel Automation</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">PostgreSQL</span>
+        <span class="tag">ArcGIS Pro</span>
         <span class="tag">VISSIM-COM</span>
       </div>
     </section>
@@ -310,43 +471,85 @@
     <section id="projects">
       <h2>Featured Projects</h2>
 
-      <div class="project">
-        <h3>ViCaRe — VISSIM Calibrator and Reporter</h3>
-        <p><strong>Role:</strong> Developer, Data Scientist, and Product Designer</p>
+      <div class="project responsible-ai">
+        <h3>Machine Learning Performance Bias Framework for Intelligent Transportation Systems</h3>
+        <p><strong>Focus:</strong> Responsible AI, fairness, safety, model reliability, and evaluation methodology</p>
+
+        <span class="ai-badge">Responsible AI</span>
+        <span class="ai-badge">Bias Analysis</span>
+        <span class="ai-badge">Model Validation</span>
+        <span class="risk-badge">Safety-Critical Systems</span>
+        <span class="metric-badge">Subgroup Performance</span>
 
         <p>
-          ViCaRe is a professional automation software for VISSIM calibration, simulation result extraction,
-          data processing, and Excel reporting. It automates workflows that traditionally require many hours
-          of repetitive manual work.
+          My doctoral research evaluated performance bias in machine learning applications for Intelligent
+          Transportation Systems. The work focused on model diagnostics, subgroup performance, feature-space
+          reliability, and how methodological choices affect model behavior under different operating conditions.
         </p>
 
         <ul>
-          <li>Automated reporting for nodes, links, lanes, travel time, throughput, and network-level results.</li>
-          <li>Designed calibration workflows using genetic algorithms and multi-scenario parameter search.</li>
-          <li>Built repeatable data-processing workflows for transportation simulation projects.</li>
+          <li>Designed research methods to measure when ML models perform unevenly across data conditions.</li>
+          <li>Evaluated classification-regression workflows for traffic incident clearance time prediction.</li>
+          <li>Studied dimension reduction and feature selection as tools for improving model reliability.</li>
+          <li>Translated technical findings into research papers, presentations, and practical recommendations.</li>
+        </ul>
+      </div>
+
+      <div class="project safety">
+        <h3>ViCaRe — VISSIM Calibrator and Reporter</h3>
+        <p><strong>Role:</strong> Inventor, Developer, Data Scientist, and Product Designer</p>
+
+        <span class="research-badge">Genetic Algorithm</span>
+        <span class="research-badge">Optimization</span>
+        <span class="research-badge">Simulation Calibration</span>
+        <span class="metric-badge">Multi-Metric Validation</span>
+        <span class="risk-badge">Engineer-Controlled Automation</span>
+
+        <p>
+          ViCaRe is a professional automation software for VISSIM calibration, simulation result extraction,
+          data processing, and Excel reporting. Built from more than three years of transportation research
+          and calibration work, it reduces repetitive calibration time by replacing manual trial-and-error
+          with structured search, validation, and reporting workflows.
+        </p>
+
+        <ul>
+          <li>Built more than 15,000 lines of Python code for VISSIM-COM automation, calibration logic, data processing, and reporting.</li>
+          <li>Designed calibration workflows using Genetic Algorithm and Hall-of-Fame logic.</li>
+          <li>Supported multi-scenario testing, multi-MoE validation, penalized error functions, dynamic mutation, and error tolerance.</li>
           <li>Converted complex simulation outputs into structured, formatted, decision-ready Excel reports.</li>
         </ul>
       </div>
 
       <div class="project">
-        <h3>Machine Learning Framework for Performance Bias in Intelligent Transportation Systems</h3>
-        <p><strong>Focus:</strong> Machine learning, statistical evaluation, and model reliability</p>
+        <h3>Weather-Aware Freeway Speed Prediction</h3>
+        <p><strong>Focus:</strong> Predictive modeling, risk-aware mobility analysis, and spatio-temporal data</p>
+
+        <span class="research-badge">Machine Learning</span>
+        <span class="research-badge">Traffic Data</span>
+        <span class="research-badge">Weather Data</span>
+        <span class="metric-badge">Predictive Evaluation</span>
 
         <p>
-          My doctoral research focused on evaluating performance bias in machine learning applications for
-          Intelligent Transportation Systems. The work emphasized model diagnostics, subgroup performance,
-          reliability, and behavior across different operating conditions.
+          Developed and evaluated machine learning workflows using high-resolution radar weather data and
+          freeway traffic data to improve short-term speed prediction and understand how environmental
+          conditions affect transportation-system performance.
         </p>
       </div>
 
       <div class="project">
         <h3>Automated Transportation Data Reporting Pipelines</h3>
-        <p><strong>Focus:</strong> Python automation, simulation analytics, and reporting</p>
+        <p><strong>Focus:</strong> Python automation, data quality, simulation analytics, and reporting</p>
 
         <p>
           Built workflows for processing, aggregating, validating, and formatting transportation simulation
           results for engineering reports and client deliverables.
         </p>
+
+        <ul>
+          <li>Processed large simulation outputs into clean tables, summaries, and decision-ready reports.</li>
+          <li>Improved repeatability by replacing manual spreadsheet work with automated reporting logic.</li>
+          <li>Communicated methods and outputs to engineers, project teams, and public-sector stakeholders.</li>
+        </ul>
       </div>
     </section>
 
@@ -454,6 +657,7 @@
         <span class="research-badge">Classification</span>
         <span class="research-badge">Regression</span>
         <span class="research-badge">Incident Analytics</span>
+        <span class="risk-badge">Safety Analytics</span>
 
         <p>
           <strong>Authors:</strong> M Attallah, J Kianfar<br>
@@ -480,6 +684,7 @@
         <span class="research-badge">Dimension Reduction</span>
         <span class="research-badge">Performance Bias</span>
         <span class="research-badge">Model Validation</span>
+        <span class="ai-badge">Responsible AI</span>
 
         <p>
           <strong>Authors:</strong> M Attallah, J Kianfar<br>
@@ -505,14 +710,21 @@
       <ul>
         <li>Co-founded Intreelligent to develop automation and decision-support tools for transportation professionals.</li>
         <li>Designed and developed ViCaRe, an automation software for VISSIM calibration and results reporting.</li>
-        <li>Built analytical workflows combining engineering knowledge, statistics, optimization, and software automation.</li>
+        <li>Built analytical workflows combining engineering knowledge, statistics, optimization, software automation, and explainable reporting.</li>
       </ul>
 
       <h3>Traffic Engineer / Data Scientist</h3>
       <ul>
         <li>Built, calibrated, and evaluated microsimulation models using VISSIM, Synchro, and VISTRO.</li>
         <li>Conducted traffic operations analysis, future-condition modeling, safety analysis, and scenario comparison.</li>
-        <li>Developed automated workflows to process simulation results and reduce repetitive reporting tasks.</li>
+        <li>Translated simulation outputs and field observations into technical reports and stakeholder-ready recommendations.</li>
+      </ul>
+
+      <h3>Transportation Data Scientist and ITS Researcher</h3>
+      <ul>
+        <li>Applied XGBoost, statistical modeling, and validation methods to transportation prediction and safety-related analytics.</li>
+        <li>Studied model bias, dimension reduction, incident clearance prediction, and performance reliability in ML-based ITS applications.</li>
+        <li>Presented research to academic, technical, and transportation audiences with emphasis on actionable interpretation.</li>
       </ul>
     </section>
 
@@ -526,8 +738,10 @@
       </p>
 
       <p>
-        I have experience designing complete analytical processes, including data preparation, model development,
-        model evaluation, calibration, reporting, and software implementation.
+        For safety and responsible AI work, I am especially interested in how data quality, feature design,
+        metric selection, model architecture, evaluation strategy, and product context shape downstream risk.
+        I care about making AI systems measurable, interpretable, and accountable rather than treating them
+        as black boxes.
       </p>
     </section>
 
@@ -538,7 +752,7 @@
         For professional inquiries, collaboration, or data science opportunities, please use the links below.
       </p>
 
-      <a class="button" href="mailto:info@intreelligent.net">Email Me</a>
+      <a class="button" href="mailto:attallah.its@gmail.com">Email Me</a>
       <a class="button secondary" href="https://www.linkedin.com/in/mustafa-attallah" target="_blank">LinkedIn</a>
       <a class="button secondary" href="https://github.com/mustafaattallah" target="_blank">GitHub</a>
       <a class="button secondary" href="https://github.com/mustafaattallah/VissiCaRe" target="_blank">ViCaRe Project</a>
@@ -547,7 +761,7 @@
   </main>
 
   <footer>
-    © 2026 Mustafa Attallah. Data Science Portfolio.
+    © 2026 Mustafa Attallah. Responsible AI & Data Science Portfolio.
   </footer>
 
 </body>
